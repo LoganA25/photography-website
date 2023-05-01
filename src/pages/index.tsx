@@ -1,14 +1,16 @@
 import ImageGallery from "@/components/ImageGallery";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 function Home() {
   return (
     <>
-      <div className="bg-[#FFE8D6]">
+      <div className="min-h-screen bg-[#FFE8D6]">
         <Header />
-        <div className="container mx-auto p-12">
+        <div className="container mx-auto">
           <ImageGallery />
         </div>
+        <Footer />
       </div>
     </>
   );

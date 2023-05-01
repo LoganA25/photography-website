@@ -21,6 +21,8 @@
 }
 
 body {
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -29,3 +31,4 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+

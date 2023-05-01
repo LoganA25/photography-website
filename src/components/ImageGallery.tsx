@@ -53,7 +53,7 @@ function ImageGallery({ columnCount = 3 }) {
 
   return (
     <div className="mx-auto max-w-7xl">
-      <div className="p-20 grid grid-cols-3 gap-4">
+      <div className="p-5 md:p-20 grid grid-cols-1 md:grid-cols-3 gap-4">
         {/* map over the columns array to create a grid for each column */}
         {columns.map((column, columnIndex) => (
           <div key={columnIndex} className="grid grid-cols-1 gap-4">
