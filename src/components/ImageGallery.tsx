@@ -1,4 +1,6 @@
 import Image from "next/image";
+import "photoswipe/dist/photoswipe.css";
+import { Gallery, Item } from "react-photoswipe-gallery";
 import img from "../../public/FirstSet/IMG_1127.jpg";
 import img2 from "../../public/FirstSet/IMG_1133.jpg";
 import img3 from "../../public/FirstSet/IMG_1138.jpg";
@@ -38,13 +40,9 @@ const imageUrls = [
 ];
 
 function ImageGallery({ columnCount = 3 }) {
-  // calculate the number of images per column based on the total number of images and column count
   const imagesPerColumn = Math.ceil(imageUrls.length / columnCount);
 
-  // create an array of empty values with length equal to column count,
-  // then map over it to create a new array of columns where each column is an array of images
   const columns = [...Array(columnCount)].map((_, columnIndex) =>
-    // slice the imageUrls array to get images for the current column
     imageUrls.slice(
       columnIndex * imagesPerColumn,
       (columnIndex + 1) * imagesPerColumn
@@ -53,28 +51,40 @@ function ImageGallery({ columnCount = 3 }) {
 
   return (
     <div className="mx-auto max-w-7xl">
-      <div className="p-5 md:p-20 grid grid-cols-1 md:grid-cols-3 gap-4">
-        {/* map over the columns array to create a grid for each column */}
-        {columns.map((column, columnIndex) => (
-          <div key={columnIndex} className="grid grid-cols-1 gap-4">
-            {/* map over the images in the current column to create an image element for each */}
-            {column.map((url, index) => (
-              <div
-                key={index}
-                className="relative overflow-hidden flex flex-grow"
-              >
-                <Image
-                  alt=""
-                  src={url.src}
+      <Gallery>
+        <div className="p-5 md:p-20 grid grid-cols-1 md:grid-cols-3 gap-4">
+          {columns.map((column, columnIndex) => (
+            <div key={columnIndex} className="grid grid-cols-1 gap-4">
+              {column.map((url, index) => (
+                <Item
+                  key={index}
+                  original={url.src}
+                  thumbnail={url.src}
                   width={url.width}
                   height={url.height}
-                  style={{ objectFit: "cover" }}
-                />
-              </div>
-            ))}
-          </div>
-        ))}
-      </div>
+                >
+                  {({ ref, open }) => (
+                    <div
+                      ref={ref as React.MutableRefObject<HTMLDivElement>}
+                      onClick={open}
+                      className="relative overflow-hidden flex flex-grow"
+                      style={{ cursor: "pointer"}}
+                    >
+                      <Image
+                        alt=""
+                        src={url.src}
+                        width={url.width}
+                        height={url.height}
+                        style={{ objectFit: "cover"}}
+                      />
+                    </div>
+                  )}
+                </Item>
+              ))}
+            </div>
+          ))}
+        </div>
+      </Gallery>
     </div>
   );
 }
@@ -84,5 +94,3 @@ export default ImageGallery;
 //flex-row minimum size of each photo flex grow to fill space
 //Possibly make grid with 3 grids in grid -- this worked
 //flex-basis tells the item how big it should be before it grows
-
-
