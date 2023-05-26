@@ -1,19 +1,20 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Image from "next/image";
+import image from "../../public/FirstSet/IMG_2750.jpg"
 
 export default function About() {
     return (
       <>
-        <div className="min-h-screen bg-[#FFF] text-[#2D2D2D]">
+        <div className="min-h-screen bg-[#FFF] text-[#2D2D2D]  w-full">
           <Header />
-          <div className="flex flex-col md:flex-row md:p-24 items-start justify-center">
+          <div className="flex flex-col  md:p-24 items-center justify-center mx-auto">
             <div className="md:w-1/2" style={{ maxWidth: '525px' }}>
               <Image
                 src="/FirstSet/img_2750.jpg"
                 alt="Mandy"
-                width={500}
-                height={500}
+                width={image.width}
+                height={image.height}
                 className="max-w-full"
               />
             </div>
