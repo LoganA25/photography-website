@@ -5,7 +5,7 @@ import ImageGallery from "@/components/ImageGallery";
 function Home() {
   return (
     <>
-      <div className="min-h-screen bg-[#FFE8D6]">
+      <div className="min-h-screen bg-[#FFF]">
         <Header />
         <div className="container mx-auto">
           <ImageGallery />
