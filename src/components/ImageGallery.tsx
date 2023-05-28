@@ -79,6 +79,9 @@ function ImageGallery({ columnCount = 3 }) {
 
   return (
     <div className="mx-auto max-w-7xl">
+       {/* do this and put all the shit on firebase storage */}
+      {/* <Image src="https://firebasestorage.googleapis.com/v0/b/websites-1861c.appspot.com/o/20221017_164836.jpg?alt=media&token=1020fb10-1f6d-4527-8e19-403fa5f67925" alt="I am a bitch." width={500} height={500}/> */}
+      
       <Gallery>
         <div className="p-5 md:p-10 grid grid-cols-1 md:grid-cols-3 gap-x-3">
           {columns.map((column, columnIndex) => (
