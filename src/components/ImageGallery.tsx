@@ -48,7 +48,7 @@ function ImageGallery({ columnCount = 3 }: { columnCount?: number }) {
     };
 
     fetchImageDimensions();
-  }, []); // Empty dependency array ensures the effect runs only once
+  }, []); 
 
   const imagesPerColumn = Math.ceil(imageUrls.length / columnCount);
 
