@@ -105,7 +105,6 @@ function ImageGallery({ columnCount = 3 }: { columnCount?: number }) {
                             objectFit: "contain",
                             objectPosition: "top",
                           }}
-                          loading="lazy"
                         />
                       </div>
                     )}
