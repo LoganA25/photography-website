@@ -23,6 +23,7 @@
 
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import React from "react"
 import Link from "next/link";
 import Image from "next/image";
 import img from "../../public/Logo/MandyLogos-02.png";
@@ -31,7 +32,7 @@ function classNames(...classes: any[]) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function Example() {
+export default function Header() {
   return (
     <Disclosure as="nav" className="bg[#FFF]">
       {({ open }) => (
@@ -54,12 +55,14 @@ export default function Example() {
                   </Link>
                   <div className="h-44">
                     <Link className="flex-shrink-0" href="/">
+                      <div className="overflow-hidden ">
                       <Image
                         src={img}
                         alt="Moments by Mandy"
                         width={200}
                         height={200}
                       />
+                      </div>
                     </Link>
                   </div>
                   <Link
