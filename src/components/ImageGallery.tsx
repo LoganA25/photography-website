@@ -15,7 +15,7 @@ interface ImageDimension {
 }
 
 function ImageGallery({ columnCount = 3 }: { columnCount?: number }) {
-  const [imageDimensions, setImageDimensions] = useState<ImageDimension[]>([]); // State variable to store the dimensions of images
+  const [imageDimensions, setImageDimensions] = useState<ImageDimension[]>([]); 
 
   useEffect(() => {
     const fetchImageDimensions = async () => {
