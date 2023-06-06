@@ -1,26 +1,3 @@
-// import Link from "next/link";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faBars } from "@fortawesome/free-solid-svg-icons";
-// import MyDropdown from "./MobileNav";
-// export default function Header() {
-//   return (
-//     <nav className="bg-[#2D2D2D] justify-center p-5">
-//       <div className="text-[#E8E9ED] text-xl flex justify-between items-center">
-//         <span className="font-semibold text-4xl tracking-tight">
-//           <Link href="/">Moments by Mandy</Link>
-//         </span>
-//         <MyDropdown/>
-//         {/* <FontAwesomeIcon icon={faBars} className="md:invisible text-white"  size='lg' /> */}
-//         <span className="hidden md:flex items-center space-x-7 text-1xl">
-//           <Link href="/">Home</Link>
-//           <Link href="about">About</Link>
-//           <Link href="contact">Contact</Link>
-//         </span>
-//       </div>
-//     </nav>
-//   );
-// }
-
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import React from "react"
@@ -80,9 +57,9 @@ export default function Header() {
                 </div>
               </div>
 
-              <div className="-mr-2 flex sm:hidden">
+              <div className="-mr-2 flex sm:hidden ml-auto">
                 {/* Mobile menu button */}
-                <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                <Disclosure.Button className="inline-flex rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
                     <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
@@ -96,25 +73,24 @@ export default function Header() {
 
           <Disclosure.Panel className="sm:hidden">
             <div className="space-y-1 px-2 pb-3 pt-2">
-              {/* Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" */}
               <Disclosure.Button
                 as="a"
                 href="/"
-                className="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white"
+                className="block rounded-md px-3 py-2 text-center font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
               >
                 Home
               </Disclosure.Button>
               <Disclosure.Button
                 as="a"
                 href="/about"
-                className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                className="block rounded-md px-3 py-2 text-center font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
               >
                 About
               </Disclosure.Button>
               <Disclosure.Button
                 as="a"
                 href="/contact"
-                className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                className="block rounded-md px-3 py-2 text-center font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
               >
                 Contact
               </Disclosure.Button>

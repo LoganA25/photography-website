@@ -3,10 +3,10 @@ import Image from "next/image";
 import "photoswipe/dist/photoswipe.css";
 import { Gallery, Item } from "react-photoswipe-gallery";
 
-const imageUrls: string[] = [
-  "https://firebasestorage.googleapis.com/v0/b/photography-c693c.appspot.com/o/FirstSet%2FIMG_1157.jpg?alt=media&token=06b66995-61a9-4b01-add2-f9c72384e43c&_gl=1*uzs8sn*_ga*NjUyMzQzOTkzLjE2ODUyMzg1NzE.*_ga_CW55HF8NVT*MTY4NTc0OTkwMC44LjEuMTY4NTc0OTk0MC4wLjAuMA..",
-  "https://firebasestorage.googleapis.com/v0/b/photography-c693c.appspot.com/o/FirstSet%2FIMG_1127.jpg?alt=media&token=28a585cd-3580-4144-a547-8b2f071ba266&_gl=1*7uetf3*_ga*NjUyMzQzOTkzLjE2ODUyMzg1NzE.*_ga_CW55HF8NVT*MTY4NTc0OTkwMC44LjEuMTY4NTc0OTk2Ni4wLjAuMA..",
-];
+interface ImageGalleryProps {
+  columnCount?: number;
+  imageUrls: string[];
+}
 
 interface ImageDimension {
   url: string;
@@ -14,8 +14,8 @@ interface ImageDimension {
   height: number;
 }
 
-function ImageGallery({ columnCount = 3 }: { columnCount?: number }) {
-  const [imageDimensions, setImageDimensions] = useState<ImageDimension[]>([]); 
+function ImageGallery({ columnCount = 3, imageUrls }: ImageGalleryProps) {
+  const [imageDimensions, setImageDimensions] = useState<ImageDimension[]>([]);
 
   useEffect(() => {
     const fetchImageDimensions = async () => {
@@ -48,7 +48,7 @@ function ImageGallery({ columnCount = 3 }: { columnCount?: number }) {
     };
 
     fetchImageDimensions();
-  }, []); // Empty dependency array ensures the effect runs only once
+  }, [imageUrls]); // Update the effect when imageUrls change
 
   const imagesPerColumn = Math.ceil(imageUrls.length / columnCount);
 
@@ -105,7 +105,6 @@ function ImageGallery({ columnCount = 3 }: { columnCount?: number }) {
                             objectFit: "contain",
                             objectPosition: "top",
                           }}
-                          loading="lazy"
                         />
                       </div>
                     )}
