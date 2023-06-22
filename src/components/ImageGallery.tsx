@@ -48,11 +48,7 @@ function ImageGallery({ columnCount = 3, imageUrls }: ImageGalleryProps) {
     };
 
     fetchImageDimensions();
-<<<<<<< HEAD
-  }, [imageUrls]); // Update the effect when imageUrls change
-=======
-  }, []); 
->>>>>>> 9d37b63c2d820883169c4e503627da6ee3c55625
+  }, []); // Update the effect when imageUrls change
 
   const imagesPerColumn = Math.ceil(imageUrls.length / columnCount);
 
@@ -71,7 +67,7 @@ function ImageGallery({ columnCount = 3, imageUrls }: ImageGalleryProps) {
   return (
     <div className="mx-auto max-w-7xl">
       <Gallery>
-        <div className="p-5 md:p-10 grid grid-cols-1 md:grid-cols-3 gap-x-3">
+        <div className="p-5 md:p-10 grid grid-cols-1 md:grid-cols-3 gap-x-3 gap-y-3">
           {columns.map((column, columnIndex) => (
             <div key={columnIndex} className="space-y-3">
               {column.map((url, index) => {

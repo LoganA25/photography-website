@@ -1,14 +1,40 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Image from "next/image";
+import Banner from "../../public/Photos/HomePageBanner.png";
+import MobileBanner from "../../public/Photos/HomePageBannerMobile.png";
+import { playfair_display } from "../../public/fonts/custom-fonts";
 
 function Home() {
   return (
     <>
-      <div className="min-h-screen bg-[#FFF]">
-        <Header />
-        <div className="container mx-auto">
+      <div className={playfair_display.className}>
+        <div className="min-h-screen bg-[#FFF]">
+          <header className="sticky top-0">
+            <Header />
+          </header>
+          <div>
+            <div className="hidden sm:block">
+              <Image
+                src={Banner}
+                alt="Moments by Mandy"
+                width={3840}
+                height={2164}
+                style={{ width: "100%" }}
+              />
+            </div>
+            <div className="sm:hidden">
+              <Image
+                src={MobileBanner}
+                alt="Moments by Mandy"
+                width={860}
+                height={1864}
+                style={{ width: "100%" }}
+              />
+            </div>
+          </div>
+          <Footer />
         </div>
-        <Footer />
       </div>
     </>
   );
