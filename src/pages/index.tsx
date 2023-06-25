@@ -10,9 +10,7 @@ function Home() {
     <>
       <div className={playfair_display.className}>
         <div className="min-h-screen bg-[#FFF]">
-          <header className="sticky top-0">
-            <Header />
-          </header>
+          <Header />
           <div>
             <div className="hidden sm:block">
               <Image

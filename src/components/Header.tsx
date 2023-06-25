@@ -44,7 +44,7 @@ export default function Header() {
               </div>
               <div className="flex items-center justify-center">
                 <div>
-                  <div className="flex space-x-7 text-[#697D5A] text-2xl items-center">
+                  <div className="flex space-x-7 text-[#B6C9B9] text-2xl items-center">
                     <Link
                       href="/"
                       className="rounded-md px-3 py-2 font-medium hidden sm:block hover:text-[#D5467E]"

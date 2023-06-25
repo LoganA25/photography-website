@@ -1,4 +1,4 @@
-import { PT_Sans_Narrow, Playfair_Display } from 'next/font/google'
+import { PT_Sans_Narrow, Playfair_Display, Seaweed_Script } from 'next/font/google'
 
  
 export const pt_sans_narrow = PT_Sans_Narrow({
@@ -12,3 +12,11 @@ export const playfair_display = Playfair_Display({
     display: 'swap',
     weight: ['600'],
 })
+
+export const seaweed_script = Seaweed_Script({
+    subsets: ['latin'],
+    display: 'swap',
+    weight: ['400'],
+})
+
+
