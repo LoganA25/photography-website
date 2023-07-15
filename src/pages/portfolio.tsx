@@ -23,7 +23,9 @@ export default function Portfolio() {
                   />
                 </div>
                 <div className="p-9 max-[485px]:p-7 text-center">
-                  <h4 className="block text-4xl max-[485px]:text-3xl">Wedding & Engagement</h4>
+                  <h4 className="block text-4xl max-[485px]:text-3xl">
+                    Wedding & Engagement
+                  </h4>
                 </div>
               </div>
               <div className="relative flex w-96 max-[485px]:xs:w-80 flex-col bg-[#E9EFF0] text-[#7A7A7A] shadow-[0_35px_35px_rgba(0,0,0,0.5)] -rotate-6">
@@ -36,7 +38,9 @@ export default function Portfolio() {
                   />
                 </div>
                 <div className="p-9 max-[485px]:p-7 text-center">
-                  <h4 className="block text-4xl max-[485px]:text-3xl">Wedding & Engagement</h4>
+                  <h4 className="block text-4xl max-[485px]:text-3xl">
+                    Wedding & Engagement
+                  </h4>
                 </div>
               </div>
               <div className="relative flex w-96 max-[485px]:xs:w-80 flex-col bg-[#E9EFF0] text-[#7A7A7A] shadow-[0_35px_35px_rgba(0,0,0,0.5)] rotate-6">
@@ -49,7 +53,9 @@ export default function Portfolio() {
                   />
                 </div>
                 <div className="p-9 max-[485px]:p-7 text-center">
-                  <h4 className="block text-4xl max-[485px]:text-3xl">Wedding & Engagement</h4>
+                  <h4 className="block text-4xl max-[485px]:text-3xl">
+                    Wedding & Engagement
+                  </h4>
                 </div>
               </div>
               <div className="relative flex w-96 max-[485px]:xs:w-80 flex-col bg-[#E9EFF0] text-[#7A7A7A] shadow-[0_35px_35px_rgba(0,0,0,0.5)] -rotate-12">
@@ -62,7 +68,9 @@ export default function Portfolio() {
                   />
                 </div>
                 <div className="p-9 max-[485px]:p-7 text-center">
-                  <h4 className="block text-4xl max-[485px]:text-3xl">Wedding & Engagement</h4>
+                  <h4 className="block text-4xl max-[485px]:text-3xl">
+                    Wedding & Engagement
+                  </h4>
                 </div>
               </div>
               <div className="relative flex w-96 max-[485px]:xs:w-80 flex-col bg-[#E9EFF0] text-[#7A7A7A] shadow-[0_35px_35px_rgba(0,0,0,0.5)] rotate-6">
@@ -75,7 +83,9 @@ export default function Portfolio() {
                   />
                 </div>
                 <div className="p-9 max-[485px]:p-7 text-center">
-                  <h4 className="block text-4xl max-[485px]:text-3xl">Wedding & Engagement</h4>
+                  <h4 className="block text-4xl max-[485px]:text-3xl">
+                    Wedding & Engagement
+                  </h4>
                 </div>
               </div>
             </div>

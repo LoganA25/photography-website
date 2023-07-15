@@ -16,9 +16,8 @@ interface ImageDimension {
 
 function ImageGallery({ columnCount = 3, imageUrls }: ImageGalleryProps) {
   const [imageDimensions, setImageDimensions] = useState<ImageDimension[]>([]);
-
   useEffect(() => {
-    const fetchImageDimensions = async () => {
+    const fetchImageDimensions = async (imageUrls : string[]) => {
       // Create an array of promises to fetch the dimensions of all images
       const dimensionsPromises = imageUrls.map(
         (url): Promise<ImageDimension> =>
@@ -47,8 +46,8 @@ function ImageGallery({ columnCount = 3, imageUrls }: ImageGalleryProps) {
       }
     };
 
-    fetchImageDimensions();
-  }, []); // Update the effect when imageUrls change
+    fetchImageDimensions(imageUrls);
+  }, [imageUrls]); // Update the effect when imageUrls change
 
   const imagesPerColumn = Math.ceil(imageUrls.length / columnCount);
 
