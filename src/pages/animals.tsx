@@ -6,7 +6,6 @@ import { useImageUrls } from "@/hooks/useImageUrls";
 
 function Animals() {
   const imageUrls = useImageUrls("Animals");
-  console.log(imageUrls);
 
   return (
     <div className="flex flex-col min-h-screen bg-[#FFF]">
