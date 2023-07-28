@@ -8,10 +8,10 @@ export default function Contact() {
         <Header />
         <div className="flex items-center justify-center h-screen">
           <div className="w-full max-w-xl">
-            <div className="text-2xl sm:text-4xl md:text-3xl font-bold mb-4 text-center">
+            <div className="text-2xl sm:text-4xl md:text-3xl font-bold mb-4 text-center text-[#7A7A7A]">
               Contact Me
             </div>
-            <form className="bg-[#2D2D2D] shadow-md rounded px-8 pt-6 pb-8 mb-4">
+            <form className="bg-[#7A7A7A] shadow-md rounded px-8 pt-6 pb-8 mb-4">
               <div className="mb-4">
                 <label
                   className="block text-[#E8E9ED] text-sm font-bold mb-2"
@@ -56,7 +56,7 @@ export default function Contact() {
               </div>
               <div className="flex items-center justify-center">
                 <button
-                  className="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                  className="bg-[#FFF] text-[#7A7A7A] hover:bg-[#7A7A7A] hover:text-[#FFF] font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                   type="button"
                 >
                   Send
