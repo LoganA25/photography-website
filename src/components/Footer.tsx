@@ -42,7 +42,7 @@ export default function Footer() {
           </ul>
         </nav>
         <div className="bg-[#FFF] p-2 text-center">
-          All content Copyright © 2023 Moments by Mandy
+          All content Copyright © 2024 Moments by Mandy
         </div>
       </div>
     </footer>
