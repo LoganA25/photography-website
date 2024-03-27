@@ -1,7 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ImageGallery from "@/components/ImageGallery";
-import { useImageUrls } from "@/hooks/useImageUrls";
 import cows from "/public/cows.jpeg";
 import dog1 from "/public/dogs.jpeg";
 import dog2 from "/public/dogs2.jpeg";
