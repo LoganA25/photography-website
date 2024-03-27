@@ -1,8 +1,8 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Image from "next/image";
-import Banner from "../../public/Photos/HomePageBanner.png";
-import MobileBanner from "../../public/Photos/HomePageBannerMobile.png";
+import Banner from "../../public/photos/HomePageBanner.png";
+import MobileBanner from "../../public/photos/HomePageBannerMobile.png";
 import { playfair_display } from "../../public/fonts/custom-fonts";
 
 function Home() {

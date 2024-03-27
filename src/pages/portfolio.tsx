@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Image from "next/image";
-import AnimalsPortfolio from "../../public/Photos/AnimalsPortfolio.jpg";
+import AnimalsPortfolio from "../../public/photos/AnimalsPortfolio.jpg";
 import { seaweed_script } from "../../public/fonts/custom-fonts";
 import Link from "next/link";
 

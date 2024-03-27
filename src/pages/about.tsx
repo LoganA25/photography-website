@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Image from "next/image";
-import AboutMe from "../../public/Photos/AboutMe.jpeg";
+import AboutMe from "../../public/photos/AboutMe.jpeg";
 import { playfair_display } from "../../public/fonts/custom-fonts";
 
 export default function About() {
