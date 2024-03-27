@@ -3,7 +3,7 @@ import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import Logo from "../../public/Photos/Logo.png";
+import Logo from "../../public/photos/Logo.png";
 import { pt_sans_narrow } from "../../public/fonts/custom-fonts";
 
 function classNames(...classes: any[]) {
